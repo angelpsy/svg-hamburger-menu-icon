@@ -1,0 +1,65 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+a {
+  color: #bb86fc;
+}
+
+a:hover {
+  color: #3700b3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #bb86fc;
+}
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+}
+
+.hamburger__bar {
+  stroke: #fff;
+  stroke-width: 10%;
+  transform-origin: center;
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.hamburger__bar--top {
+  transform: translateY(-40%);
+}
+
+.hamburger__bar--bot {
+  transform: translateY(40%);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+.hamburger-label {
+  display: inline-block;
+}
+
+#hamburger-checkbox:checked + .hamburger-label .hamburger__bar--top {
+  transform: rotate(45deg);
+}
+
+#hamburger-checkbox:checked + .hamburger-label .hamburger__bar--mid {
+  transform: scaleX(0.1);
+}
+
+#hamburger-checkbox:checked + .hamburger-label .hamburger__bar--bot {
+  transform: rotate(-45deg);
+}
